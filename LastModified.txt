@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION trigger_set_timestamp()
 RETURNS TRIGGER AS $$
 BEGIN
-  NEW.LastModified = NOW();
+  NEW."DateLastModified" = NOW();
   RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
